@@ -17,6 +17,6 @@ $serv->on('close', function ($serv, $fd) {
     echo "Client: Close.\n";
 });
 
-//启动服务器,git
+//启动服务器,gitdgjkldfglkdfgjlgk
 $serv->start(); 
 ?>
