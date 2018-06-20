@@ -20,6 +20,9 @@ $serv->on('task', function ($serv, $task_id, $from_id, $data) {
 
 //处理异步任务的结果
 $serv->on('finish', function ($serv, $task_id, $data) {
+    for($i=0;$i<1000000;$i++){
+
+    }
     echo "AsyncTask[$task_id] Finish: $data".PHP_EOL;
 });
 
