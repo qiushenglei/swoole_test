@@ -17,6 +17,6 @@ $serv->on('close', function ($serv, $fd) {
     echo "Client: Close.\n";
 });
 
-//启动服务器2211166661
+//启动服务器221
 $serv->start(); 
 ?>
