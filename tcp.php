@@ -19,6 +19,4 @@ $serv->on('close', function ($serv, $fd) {
 
 //启动服务器
 $serv->start(); 
-
-
 ?>
