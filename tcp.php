@@ -8,7 +8,7 @@ $serv->on('receive', function($serv, $fd, $from_id, $data) {
     //投递异步任务
     $task_id = $serv->task($data);
     echo "Dispath AsyncTask: id=$task_id\n";
-    $serv->send("addTask success");
+    $serv->send($fd, "addTask success");
 });
 
 //处理异步任务
