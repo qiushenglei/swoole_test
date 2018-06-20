@@ -16,6 +16,7 @@ $client->on("error", function($cli){
     echo "Connect failed\n";
 });
 
+
 //注册连接关闭回调
 $client->on("close", function($cli){
     echo "Connection close\n";
