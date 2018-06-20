@@ -3,7 +3,7 @@
 $serv = new swoole_server("127.0.0.1", 9501); 
 
 $serv->set(array(
-    'worker_num' => 1,
+    'worker_num' => 4,
     )
 );
 //监听连接进入事件
