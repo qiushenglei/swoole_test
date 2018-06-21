@@ -15,7 +15,9 @@ $serv->on('receive', function ($serv, $fd, $from_id, $data) {
 //处理异步任务
 $serv->on('task', function ($serv, $task_id, $from_id, $data) {
     echo "New AsyncTask[id=$task_id]" . PHP_EOL;
-    var_dump($data);
+    while(1){
+
+    }
     //返回任务执行的结果
     $serv->finish("$data -> OK");
 });
