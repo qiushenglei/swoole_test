@@ -26,6 +26,7 @@ $serv->on('finish', function ($serv, $task_id, $data) {
 
     }
     echo "AsyncTask[$task_id] Finish: $data" . PHP_EOL;
+    var_dump($serv->stats());
 });
 
 $serv->start();
