@@ -6,7 +6,7 @@ if (pcntl_fork() > 0)
 {
     echo "parent";
     sleep(1);
-    $lock->unlock();
+//    $lock->unlock();
 }
 else
 {
