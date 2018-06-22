@@ -17,6 +17,7 @@ else
     exit("[Child] exit\n");
 }
 echo "[Master]release lock\n";
+$lock->unlock();
 unset($lock);
 sleep(1);
 echo "[Master]exit\n";
