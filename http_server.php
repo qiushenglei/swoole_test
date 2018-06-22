@@ -1,5 +1,5 @@
 <?php
-$http = new swoole_("0.0.0.0", 9501);
+$http = new swoole_http_server("0.0.0.0", 9501);
 
 $http->on("request", function ($request, $response) {
     $client = new Swoole\Coroutine\Client(SWOOLE_SOCK_TCP);
