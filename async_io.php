@@ -1,11 +1,11 @@
 <?php
     use Swoole\Async;
-    swoole_async_read(__DIR__."/write_test.php", "read_call_back");
-//    Async::readFile(__DIR__."/tcp.php", function($a, $b){
-//
-//        echo $a;
-//        echo $b;
-//    });
+//    swoole_async_read(__DIR__."/write_test.php", "read_call_back");
+    Async::readFile(__DIR__."/tcp.php", function($a, $b){
+
+        echo $a;
+        echo $b;
+    });
 
     echo "read end"; //先输出的end,代表了是异步打开了文件
 
