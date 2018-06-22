@@ -20,5 +20,8 @@
     }
 
     echo "write end";//在read end后输出，代表了异步写入文件
-    sleep(10);
+    $i = 0;
+    while($i<10000000){
+
+    }
     echo "sleep end";
