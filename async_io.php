@@ -5,10 +5,12 @@
         echo $b;
     });
 
-    echo "end"; //先输出的end,代表了是异步打开了文件
+    echo "read end"; //先输出的end,代表了是异步打开了文件
 
 Async::writeFile(__DIR__."/write_test.php", "write test", "write_call_back", 0);
 
 function write_call_back($a, $b){
     echo "{$a} {$b}write success";
 }
+
+echo "write end";
