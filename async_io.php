@@ -1,5 +1,5 @@
 <?php
-    use \Swoole;
+    use Swoole\Async;
    Async::readFile(__DIR__."/tcp.php", function($a, $b){
         echo $a;
         echo $b;
