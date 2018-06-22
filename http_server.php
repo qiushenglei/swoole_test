@@ -11,7 +11,7 @@ $http->on("request", function ($request, $response) {
     $ret = $client->recv();
     $response->header("Content-Type", "text/plain");
     $response->end($ret);
-    $client->close();
+    //$client->close();
 });
 
 $http->start();
