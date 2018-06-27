@@ -9,7 +9,7 @@ $http->on("request", function ($request, $response) {
     //调用recv将触发协程切换
     $ret = $client->recv();
     echo "recv after";
-    echo time();
+    var_dump( microtime());
     $response->header("Content-Type", "text/plain");
     $response->end($ret);
     $client->close();
