@@ -7,9 +7,11 @@ $http->on("request", function ($request, $response) {
     //调用connect将触发协程切换
     $client->send("hello world from swoole");
     //调用recv将触发协程切换
+    var_dump( microtime(true));
+    echo "recv after";
     $ret = $client->recv();
     echo "recv after";
-    var_dump( microtime());
+    var_dump( microtime(true));
     $response->header("Content-Type", "text/plain");
     $response->end($ret);
     $client->close();
