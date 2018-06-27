@@ -8,6 +8,7 @@ $http->on("request", function ($request, $response) {
     $client->send("hello world from swoole");
     //调用recv将触发协程切换
     $ret = $client->recv();
+    echo "recv after";
     $response->header("Content-Type", "text/plain");
     $response->end($ret);
     $client->close();
