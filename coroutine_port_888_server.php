@@ -4,7 +4,8 @@ $serv->on('receive', function (\Swoole\Server $serv3, $fd, $from_id, $data) {
     for($i=0;$i<10;$i++){
         echo $i,PHP_EOL;
     }
-    var_dump( microtime());
+    var_dump( microtime(true));
+    echo Swoole\Coroutine::getuid().PHP_EOL;
     echo $data;
     $serv3->send($fd, $data.$fd." {$serv3->worker_id}\n");
 });
