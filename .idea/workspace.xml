@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="421e12ab-0b2f-4d12-a95a-0e288625655a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coroutine_channel.php" afterPath="$PROJECT_DIR$/coroutine_channel.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,7 +74,7 @@
           <file leaf-file-name="coroutine_port_9501_server.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/coroutine_port_9501_server.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="253">
+                <state relative-caret-position="230">
                   <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
                   <folding />
                 </state>
@@ -83,8 +84,8 @@
           <file leaf-file-name="coroutine_channel.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/coroutine_channel.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="184">
-                  <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="17" />
+                <state relative-caret-position="230">
+                  <caret line="10" column="5" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="10" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
@@ -93,7 +94,7 @@
           <file leaf-file-name="Coroutine.php" pinned="false" current-in-tab="false">
             <entry file="file://D:/swoole-ide-helper-master/src/Coroutine.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="208">
+                <state relative-caret-position="185">
                   <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
                   <folding />
                 </state>
@@ -325,12 +326,12 @@
       <workItem from="1529485886849" duration="16339000" />
       <workItem from="1529648267760" duration="6752000" />
       <workItem from="1530087863427" duration="7169000" />
-      <workItem from="1530498441688" duration="4410000" />
+      <workItem from="1530498441688" duration="5166000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34670000" />
+    <option name="totallyTimeSpent" value="35426000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -640,7 +641,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/coroutine_port_9501_server.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
+        <state relative-caret-position="230">
           <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
           <folding />
         </state>
@@ -672,7 +673,7 @@
     </entry>
     <entry file="file://D:/swoole-ide-helper-master/src/Coroutine.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
+        <state relative-caret-position="185">
           <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
           <folding />
         </state>
@@ -680,8 +681,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/coroutine_channel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="230">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="10" selection-end-column="5" />
           <folding />
         </state>
       </provider>
