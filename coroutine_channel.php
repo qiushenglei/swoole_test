@@ -1,6 +1,8 @@
 <?php
 use Swoole\Coroutine as co;
 
+echo Swoole\Coroutine::getuid();
+exit;
 $chan = new co\Channel(1);
 co::create(function () use ($chan) {
     for ($i = 0; $i < 100000; $i++) {
