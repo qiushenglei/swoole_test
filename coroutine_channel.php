@@ -15,6 +15,8 @@ co::create(function () use ($chan) {
     }
 });
 co::create(function () use ($chan) {
-    echo "third coroutine";
+    for($i=0;$i<100;$i++){
+        echo "third coroutine";
+    }
 });
 swoole_event::wait();
