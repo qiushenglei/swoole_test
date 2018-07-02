@@ -3,7 +3,7 @@ use Swoole\Coroutine as co;
 $chan = new co\Channel(1);
 co::create(function () use ($chan) {
     for($i = 0; $i < 100000; $i++) {
-        co::sleep(2.0);
+        co::sleep(0.1);
         $chan->push(['rand' => rand(1000, 9999), 'index' => $i]);
         echo "$i\n";
     }
