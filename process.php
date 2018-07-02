@@ -33,7 +33,7 @@
                 $this->new_index++;
             }
             swoole_set_process_name(sprintf('php-ps:%s', $index));
-            for ($j = 0; $j < 16000; $j++) {
+            for ($j = 0; $j < 16; $j++) {
                 $this->checkMpid($worker);
                 echo "msg: {$j}\n";
                 sleep(1);
