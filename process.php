@@ -10,4 +10,4 @@ var_dump($process);
 echo $process->start();
 //usleep(100);
 //
-echo $process->read(); // 输出 Hello
+//echo $process->read(); // 输出 Hello
