@@ -1,6 +1,6 @@
 <?php
 $process = new swoole_process(function (swoole_process $process) {
-    $process->write('Hello');
+//    $process->write('Hello');
     echo "callback";
     var_dump($process);
 }, true);
