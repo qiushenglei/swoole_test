@@ -8,6 +8,7 @@ $process = new swoole_process(function (swoole_process $process) {
 echo "111";
 var_dump($process);
 echo $process->start();
+echo "start after";
 var_dump($process);
 //usleep(100);
 //
