@@ -3,7 +3,7 @@ $process = new swoole_process(function (swoole_process $process) {
 //    $process->write('Hello');
     echo "callback";
     var_dump($process);
-}, true);
+}, false);
 
 echo "111";
 var_dump($process);
