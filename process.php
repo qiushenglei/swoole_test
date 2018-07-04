@@ -1,8 +1,20 @@
 <?php
-use Swoole\Process;
-$process = new Process(function (Process $worker) {
-    $worker->exec('/usr/local/php/bin/php', ['/home/work/swoole_project/echo.php','3','sdfs','5']);
-    $worker->write('hello');
-}, true); // 需要启用标准输入输出重定向
-$process->start();
-//echo "from exec: ". $process->read(). "\n";
+$server = new swoole_server('127.0.0.1', 9501);
+
+$process = new swoole_process(function($process) use ($server) {
+    while (true) {
+        $msg = $process->read();
+        foreach($server->connections as $conn) {
+            $server->send($conn, $msg);
+        }
+    }
+});
+
+$server->addProcess($process);
+
+$server->on('receive', function ($serv, $fd, $from_id, $data) use ($process) {
+    //群发收到的消息
+    $process->write($data);
+});
+
+$server->start();
