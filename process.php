@@ -1,20 +1,28 @@
 <?php
-$server = new swoole_server('127.0.0.1', 9501);
+$serv = new swoole_server("0.0.0.0", 9501);
+$serv->set(array(
+    'worker_num' => 2,
+    'task_worker_num' => 2,
+));
+$serv->on('pipeMessage', function($serv, $src_worker_id, $data) {
+    echo "#{$serv->worker_id} message from #$src_worker_id: $data\n";
+});
+$serv->on('task', function ($serv, $task_id, $from_id, $data){
+    var_dump($task_id, $from_id, $data);
+});
+$serv->on('finish', function ($serv, $fd, $from_id){
 
-$process = new swoole_process(function($process) use ($server) {
-    while (true) {
-        $msg = $process->read();
-        foreach($server->connections as $conn) {
-            $server->send($conn, $msg);
-        }
+});
+$serv->on('receive', function (swoole_server $serv, $fd, $from_id, $data) {
+    if (trim($data) == 'task')
+    {
+        $serv->task("async task coming");
+    }
+    else
+    {
+        $worker_id = 1 - $serv->worker_id;
+        $serv->sendMessage("hello task process", $worker_id);
     }
 });
 
-$server->addProcess($process);
-
-$server->on('receive', function ($serv, $fd, $from_id, $data) use ($process) {
-    //群发收到的消息
-    $process->write($data);
-});
-
-$server->start();
+$serv->start();
