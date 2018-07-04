@@ -1,15 +1,8 @@
 <?php
-$process = new swoole_process(function (swoole_process $process) {
-    $process->write('Hello');
-    echo "callback";
-    var_dump($process);
-}, false);
-
-echo "111";
-var_dump($process);
-echo $process->start();
-echo $process->read(); // 输出 Hello
-echo "start after";
-var_dump($process);
-//usleep(100);
-//
+use Swoole\Process;
+$process = new Process(function (Process $worker) {
+    $worker->exec('/home/work/swoole/echo.php', ['hello']);
+    $worker->write('hello');
+}, true); // 需要启用标准输入输出重定向
+$process->start();
+echo "from exec: ". $process->read(). "\n";
