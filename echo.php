@@ -1,3 +1,3 @@
 <?php
-var_dump($_REQUEST);
+print_r($argv);
 ?>
