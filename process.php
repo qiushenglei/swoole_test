@@ -7,7 +7,7 @@ $server->set([
 ]);
 
 $server->on('Task', function (swoole_server $serv, $task_id, $worker_id, $data) {
-    var_dump(func_get_args());
+//    var_dump(func_get_args());
     echo "#{$serv->worker_id}\tonTask: worker_id={$worker_id}, task_id=$task_id\n";
     if ($serv->worker_id == 1) {
         sleep(1);
