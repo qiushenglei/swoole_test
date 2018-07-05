@@ -14,6 +14,7 @@
 $serv = new swoole_server("127.0.0.1", 9501);
 $serv->set(array(
     'worker_num' => 2,    //开启两个worker进程
+    'max_request' => 2,   //每个worker进程max request设置为3次
 ));
 $serv->on('connect', function ($serv, $fd){
     echo "Client:Connect.\n";
