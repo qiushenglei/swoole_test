@@ -1,28 +1,25 @@
 <?php
-$serv = new swoole_server("0.0.0.0", 9501);
-$serv->set(array(
-    'worker_num' => 2,
+$server = new Swoole\Http\Server("127.0.0.1", 9502, SWOOLE_BASE);
+
+$server->set([
+    'worker_num' => 1,
     'task_worker_num' => 2,
-));
-$serv->on('pipeMessage', function($serv, $src_worker_id, $data) {
-    echo "#{$serv->worker_id} message from #$src_worker_id: $data\n";
-});
-$serv->on('task', function ($serv, $task_id, $from_id, $data){
-    var_dump($task_id, $from_id, $data);
-});
-$serv->on('finish', function ($serv, $fd, $from_id){
+]);
 
-});
-$serv->on('receive', function (swoole_server $serv, $fd, $from_id, $data) {
-    if (trim($data) == 'task')
-    {
-        $serv->task("async task coming");
+$server->on('Task', function (swoole_server $serv, $task_id, $worker_id, $data) {
+    echo "#{$serv->worker_id}\tonTask: worker_id={$worker_id}, task_id=$task_id\n";
+    if ($serv->worker_id == 1) {
+        sleep(1);
     }
-    else
-    {
-        $worker_id = 1 - $serv->worker_id;
-        $serv->sendMessage("hello task process", $worker_id);
-    }
+    return $data;
 });
 
-$serv->start();
+$server->on('Request', function ($request, $response) use ($server)
+{
+    $tasks[0] = "hello world";
+    $tasks[1] = ['data' => 1234, 'code' => 200];
+    $result = $server->taskCo($tasks, 0.5);
+    $response->end('Test End, Result: '.var_export($result, true));
+});
+
+$server->start();
