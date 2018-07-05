@@ -14,6 +14,10 @@ $server->on('Task', function (swoole_server $serv, $task_id, $worker_id, $data) 
     return $data;
 });
 
+$server->on('finish', function(){
+
+});
+
 $server->on('Request', function ($request, $response) use ($server)
 {
     $tasks[0] = "hello world";
