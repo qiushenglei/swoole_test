@@ -28,4 +28,8 @@ $server->set([
 //    $response->end('Test End, Result: '.var_export($result, true));
 //});
 
+$server->on("receive", function(){
+
+});
+
 $server->start();
