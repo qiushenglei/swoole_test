@@ -22,6 +22,7 @@ $server->on('Request', function ($request, $response) use ($server)
 {
     $tasks[0] = "hello world";
     $tasks[1] = ['data' => 1234, 'code' => 200];
+    $tasks[2] = ['data' => 'sdfsdf', 'code' => 30];
     $result = $server->taskCo($tasks, 0.5);
     $response->end('Test End, Result: '.var_export($result, true));
 });
