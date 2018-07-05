@@ -2,8 +2,8 @@
 $server = new Swoole\Http\Server("127.0.0.1", 9502, SWOOLE_BASE);
 
 $server->set([
-    'worker_num' => 1,
-    'task_worker_num' => 2,
+    'worker_num' => 2,
+//    'task_worker_num' => 2,
 ]);
 
 $server->on('Task', function (swoole_server $serv, $task_id, $worker_id, $data) {
