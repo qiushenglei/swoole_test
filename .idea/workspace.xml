@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="421e12ab-0b2f-4d12-a95a-0e288625655a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/echo.php" afterPath="$PROJECT_DIR$/echo.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +17,8 @@
       <file leaf-file-name="echo.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/echo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+            <state relative-caret-position="24">
+              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -63,6 +62,11 @@
   <component name="PhpServers">
     <servers>
       <server host="http://swoole.test.com" id="02cd7a10-3e2f-45fb-b646-312c5fca34ed" name="swoole_test" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="/home/work/swoole_project" />
+        </path_mappings>
+      </server>
+      <server host="172.18.194.112" id="0728dec3-5b4f-4a45-8510-3f95ea24b695" name="172.18.194.112" port="22" use_path_mappings="true">
         <path_mappings>
           <mapping local-root="$PROJECT_DIR$" remote-root="/home/work/swoole_project" />
         </path_mappings>
@@ -227,12 +231,12 @@
       <workItem from="1530087863427" duration="7169000" />
       <workItem from="1530498441688" duration="15525000" />
       <workItem from="1530690069240" duration="6253000" />
-      <workItem from="1568702031846" duration="1176000" />
+      <workItem from="1568702031846" duration="1461000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53214000" />
+    <option name="totallyTimeSpent" value="53499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -698,8 +702,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/echo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        <state relative-caret-position="24">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
           <folding />
         </state>
       </provider>

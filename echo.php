@@ -1,5 +1,5 @@
 <?php
-print_r($argc);
+var_dump($argv);
 $a = 123;
 $b = 456;
 $c = $a + $b;
